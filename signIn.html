@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #main{
+            height: 70px;
+            width: 1340px;
+            /* border: 1px solid red; */
+            display: flex;
+             background-color: rgb(40,116,240); 
+        }
+       
+        .yellow{
+            color: yellow;
+            font-size: 30px;
+            margin-left: 30px;
+            
+        }
+        .search{
+            margin-left: 10%;
+            height: 30px;
+            width: 350px;
+            margin-top: 20px;
+
+        }
+        .searchBtn{
+            height:38px;
+            width: 80px;
+            margin-top: 20px;
+        }
+        #leftBox{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 35%;
+            margin-left: 13%;
+            display: flex;
+        }
+        .leftFlex{
+            margin-left: 40px;
+            color: cornsilk;
+            margin-top: 30px;
+        }
+        .LogIn{
+            margin-left: 10%;
+        }
+        .LogIn>h2{
+            font-size: 40px;   
+        }
+        .input_login{
+            width: 90%;
+            height: 30px;
+        }
+        
+        #check_box{
+            /* border: 1px solid brown; */
+            height: 30px;
+            width: 50%;
+            margin-top: 20px;
+        }
+        #remeBox{
+            font-size: 17px;
+        }
+        .signUp{
+            color: rgb(11, 149, 184);
+            text-decoration: underline;
+        }
+        .signUp:hover{
+            cursor: pointer;
+        }
+        #LogIn{
+            background-color:rgb(92,184,92);
+            height: 30px;
+            width: 90px;
+            margin-left: 0%;
+            margin-top: 16px;
+            border-radius: 8px;
+        }
+        #Get_know{
+            height: 200px;
+            width: 500px;
+            /* border: 1px solid red; */
+            margin-top: 50px;
+            margin-left: 15%;
+        }
+        .input_login:hover{
+            outline: 1px solid cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p onclick="window.location.href='TopRead.html'" class="yellow">IdeaKart</p>
+        <input class="search" type="text">
+        <button class="searchBtn">Search</button>
+        <div id="leftBox">
+            <p class="leftFlex" onclick="window.location.href='About.html'">About</p>
+            <p class="leftFlex" onclick="window.location.href='Contact.html'">Contact</p>
+            <p class="leftFlex" onclick="window.location.href='signIn.html'">SignIn</p>
+            <p class="leftFlex" onclick="window.location.href='SignUp.html'">SignUp</p>
+           
+        </div>
+
+    </div>
+    <div class="LogIn">
+        <h2>Log In</h2>
+        <form onsubmit="signIn(event)">
+        <p>Email</p>
+        <input type="text" id="email" class="input_login">
+        <p>Password</p>
+        <input type="password" id="password" class="input_login">
+        <br>
+        <div id="check_box">
+        <input type="checkbox" id="remember"  name="remember">
+        <label for="remember" id="remeBox">Remember me</label>
+        </div>
+        <br>
+        <input type="submit" id="LogIn" value="Log in">
+        <p class="signUp" onclick="window.location.href='signUp.html'">Sign up</p>
+        <p class="signUp">Forget your password?</p>
+    </form>
+    </div>
+    <div id="Get_know">
+        <h3>Get To Know Us</h3>
+        <ul>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Search</a>
+            </li>
+            <li>
+                <a href="">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="">Refund Policy</a>
+            </li>
+            <li>
+                <a href="">Earn Money Online</a>
+            </li>
+            <li>
+                <a href="">QuickBuyer</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    var regUser=JSON.parse(localStorage.getItem("userDataBase"))
+    // console.log(regUser)
+    function signIn(event){
+        event.preventDefault()
+        var email=document.querySelector("#email").value
+        var password=document.querySelector("#password").value
+        
+        var flag=true
+        for(var i=0;i<regUser.length;i++){
+            if(regUser[i].emailAdd == email && regUser[i].password==password){
+                window.location.href="home.html"
+                alert("Log in successful")
+                flag=true
+                return 
+            }
+            else{
+                flag=false
+            }
+        }
+        if(flag==false){
+            alert("Wrong Information")
+        }
+    }
+</script>

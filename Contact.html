@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height: 70px;
+            width: 1340px;
+            /* border: 1px solid red; */
+            display: flex;
+             background-color: rgb(40,116,240); 
+        }
+       
+        .yellow{
+            color: yellow;
+            font-size: 30px;
+            margin-left: 30px;
+            
+        }
+        .search{
+            margin-left: 10%;
+            height: 30px;
+            width: 350px;
+            margin-top: 20px;
+
+        }
+        .searchBtn{
+            height:38px;
+            width: 80px;
+            margin-top: 20px;
+        }
+        #leftBox{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 35%;
+            margin-left: 13%;
+            display: flex;
+        }
+        .leftFlex{
+            margin-left: 40px;
+            color: cornsilk;
+            margin-top: 30px;
+        }
+       
+        body{
+            background-image: url("https://th.bing.com/th/id/R.3a334724be80f8bcf0fe32c97c582d33?rik=nli4ADS67R7IVA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fJungle-HD-Images.jpg&ehk=Ssh9r2ezAkLbt3c5nZ0eeEzkI2aZm6p60oWwDAA3M%2fk%3d&risl=&pid=ImgRaw&r=0");
+        }
+        #inputDiv{
+            height: 400px;
+            width: 900px;
+            /* border: 1px solid red; */
+            margin: 40px 0% auto 20%;
+            display: grid;
+            grid-row-gap: 0px;
+            grid-column-gap: 10px;
+            grid-template-columns: repeat(12,1fr);
+            /* grid-template-rows: repeat(7,1fr); */
+            grid-template-areas: 
+            "a a a a a a a a a a a a"
+            "b b b b b b c c c c c c"
+            "d d d d d d e e e e e e"
+            "f f f f f f g g g g g g"
+            "h h h h h h i i i i i i"
+            "j j j j j j j j j j j j"
+            "k k k k k k k k k k k k";
+        }
+        .firstLine{
+            height: 30px;
+            /* border: 1px solid rgb(9, 2, 48); */
+            grid-area: a;
+        }
+        .nameText{
+            height: 30px;
+            /* border: 1px solid brown; */
+            grid-area: b;
+            margin-top: 90px;
+        }
+        
+        .lastText{
+            height: 30px;
+            /* border: 1px solid brown; */
+            grid-area: c;
+            margin-top: 90px;
+        }
+        .emailText{
+            height: 30px;
+            /* border: 1px solid brown; */
+            grid-area: f;
+        }
+        .phoneText{
+            height: 30px;
+            /* border: 1px solid brown; */
+            grid-area: g;
+        }
+        .msgText{
+            height: 30px;
+            /* border: 1px solid brown; */
+            grid-area: j;
+        }
+
+        .firstName{
+            height: 30px;
+            
+            /* border: 1px solid blue; */
+            grid-area: d;
+        }
+        .lastName{
+            height: 30px;
+            /* border: 1px solid blue; */
+            grid-area: e;
+        }
+        .email{
+            height: 30px;
+            /* border: 1px solid blue; */
+            grid-area: h;
+        }
+        .phone{
+            height: 30px;
+            /* border: 1px solid blue; */
+            grid-area: i;
+        }
+        .msg{
+            height: 70px;
+            /* border: 1px solid blue; */
+            grid-area: k;
+        }
+        #inputName{
+            height: 100%;
+            width: 96%;
+        }
+        .firstLine>p{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 32%;
+            font-size: 20px;
+        }
+        .nameText>h5{
+            margin: auto;
+            margin-left: 33%;
+            margin-top: 10px;
+            font-size: 15px;
+            font-family: sans-serif;
+        }.lastText>h5{
+            margin: auto;
+            margin-left: 33%;
+            font-size: 15px;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+        .emailText>h5{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 33%;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+        .phoneText>h5{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 33%;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+        .msgText>h5{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 43%;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+        #lastname{
+            height: 100%;
+            width: 99%;
+            /* border-radius: 3px; */
+        }
+        #emailinput{
+            height: 100%;
+            width: 96%;
+            
+        }
+        #phoneNo{
+            height: 100%;
+            width: 99%;
+            
+        }
+        #msgtext{
+            height: 100%;
+            width: 99%;
+        
+        }
+        .submit{
+            background-color: chartreuse;
+            width: 110px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left:300% ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p onclick="window.location.href='TopRead.html'" class="yellow">IdeaKart</p>
+        <input class="search" type="text">
+        <button class="searchBtn">Search</button>
+        <div id="leftBox">
+            <p class="leftFlex" onclick="window.location.href='About.html'">About</p>
+            <p class="leftFlex" onclick="window.location.href='Contact.html'">Contact</p>
+            <p class="leftFlex" onclick="window.location.href='signIn.html'">Sign In</p>
+            <p class="leftFlex" onclick="window.location.href='SignUp.html'">Sign Up</p>
+           
+        </div>
+    </div>
+    <div id="inputDiv">
+        <div class="firstLine"><p>You can contact us by fill this form-</p></div>
+        <div class="nameText"><h5>Firstname*</h5></div>
+        <div class="lastText"><h5>Lastname*</h5></div>
+        <div class="firstName">
+        <input type="text" id="inputName" placeholder="Please Enter Your First Name*">
+        </div>
+    <div class="lastName"><input type="text" id="lastname" placeholder="Please Enter Your Last Name*"></div>
+    <div class="emailText"><h5>Email*</h5></div>
+    <div class="phoneText"><h5>Phone</h5></div>
+    <div class="email"><input type="text" id="emailinput" placeholder="Please Enter Your Email ID*"></div>
+    <div class="phone"><input type="number" id="phoneNo" placeholder="Please Enter Your Phone Number"></div>
+    <div class="msgText"><h5>Message*</h5></div>
+    <div class="msg"><input type="text" id="msgtext" placeholder="Message for me*"></div>
+    <input type="submit" class="submit">
+    </div>
+
+</body>
+</html>
+<script>
+    
+</script>

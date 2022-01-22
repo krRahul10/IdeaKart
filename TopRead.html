@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Read Page</title>
+    <style>
+        #main{
+            height: 70px;
+            width: 1340px;
+            /* border: 1px solid red; */
+            display: flex;
+             background-color: rgb(40,116,240); 
+        }
+       
+        .yellow{
+            color: yellow;
+            font-size: 30px;
+            margin-left: 30px;
+            
+        }
+        .search{
+            margin-left: 10%;
+            height: 30px;
+            width: 350px;
+            margin-top: 20px;
+
+        }
+        .searchBtn{
+            height:38px;
+            width: 80px;
+            margin-top: 20px;
+        }
+        #leftBox{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 35%;
+            margin-left: 13%;
+            display: flex;
+        }
+        .leftFlex{
+            margin-left: 40px;
+            color: cornsilk;
+            margin-top: 30px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            margin-top: 2%;
+            margin-left: 10px;
+            
+        }
+        #div1{
+             /* border: 1px solid blue;  */
+            width: 300px;
+           
+            height: auto;
+            
+        }
+        #img{
+            width: 100%;
+        }
+        #name{
+            margin-left: 3%;
+            font-family: sans-serif;
+        }
+        #price{
+            margin-left: 3%;
+            font-size: 18px;
+            color: rgb(8, 151, 151);
+        }
+        #insideDiv{
+             /* border: 1px solid red;  */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding-bottom: 20px;
+        }
+        #flex{
+          display: flex;
+          justify-content: space-between;
+          /* border: 1px solid red; */
+          border-top: 1px solid grey;
+          height: 30px;
+          width: 100%;
+        }
+        .more{
+          color: rgb(9, 105, 105);
+          margin-right: 40px;
+        }
+        .view{
+          color: rgb(9, 105, 105);
+          margin-left: 30px;
+        }
+        .view:hover{
+          cursor:pointer ;
+          text-decoration: underline;
+        }
+        .more:hover{
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        body >h3{
+            margin-left: 3%;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p onclick="window.location.href='TopRead.html'" class="yellow">IdeaKart</p>
+        <input class="search" type="text">
+        <button class="searchBtn">Search</button>
+        <div id="leftBox">
+            <p class="leftFlex" onclick="window.location.href='home.html'">Home</p>
+            <p class="leftFlex" onclick="window.location.href='About.html'">About</p>
+            <p class="leftFlex" onclick="window.location.href='Contact.html'">Contact</p>
+            <p class="leftFlex" onclick="window.location.href='signIn.html'">SignIn</p>
+            <p class="leftFlex" onclick="window.location.href='SignUp.html'">SignUp</p>
+           
+        </div>
+
+    </div>
+    <h3>Top Read</h3>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var topReadData = [
+   
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41F3cpSIljL.jpg",
+       name: "The Duty To Stand Aside: Nineteen Eighty-Four and the Wartime Quarrel of George Orwell and Alex Comfort",
+       price: "1999.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51DeJhaMC3L.jpg",
+       name: "What Is Islam? – The Importance of Being Islamic",
+       price: "437.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51eBiag%2BlTL.jpg",
+       name: "Essentials of Management for Healthcare Professionals",
+       price: "1999.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/31GCOow9x9L.jpg",
+       name: "Sufi World Folding strong 100% original wooden chess board with white & brown wooden coins. 8 X 8 INCH",
+       price: "348.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41NJE0FZDzL.jpg",
+       name: "History and Theory of Knowledge Production: An Introductory Outline",
+       price: "825.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41w%2BHhYmhfL.jpg",
+       name: "Holistic Spaces: 108 ways to create a mindful and peaceful home",
+       price: "1897.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41AJopN0-rL.jpg",
+       name: "Wittgenstein: Lectures, Cambridge 1930–1933: From the Notes of G. E. Moore",
+       price: "567.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51v0At79UrL.jpg",
+       name: "Build Your Own Motorbikes Sticker Book (Build Your Own Sticker Book)",
+       price: "777.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/511J37GR4WL.jpg",
+       name: "The Parabola, Ellipse, and Hyperbola, Treated Geometrically (Classic Reprint)",
+       price: "7860.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/513Vlu9nNQL.jpg",
+       name: "IBPS RRB-CWE Office Assistant (Multipurpose) Preliminary and Main Guide",
+       price: "287.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41Ng6VC2ufL.jpg",
+       name: 
+       "The Truth About Fat: From the author of The Angry Chef",
+       price: "8762.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51YMwitWMBL.jpg",
+       name: 
+       "SSC Junior Engineers Mechanical Engineering Paper 1",
+       price: "1527.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41kTi6FDI2L.jpg",
+       name: "SC Junior Engineers Mechanical Engineering Paper 1",
+       price: "244.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41IgIfhXb0L.jpg",
+       name: "The Truth About Fat: From the author of The Angry Chef",
+       price: "765.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/31GCOow9x9L.jpg",
+       name: 
+       "26 Years AIIMS Chapterwise Solutions - Biology",
+       price: "523.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51j3J3vZjpL.jpg",
+       name: "Beyond Dharma: Dissent in the Ancient Indian Sciences of Sex and Politics",
+       price: "437.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41F3cpSIljL.jpg",
+       name: "The Duty To Stand Aside: Nineteen Eighty-Four and the Wartime Quarrel of George Orwell and Alex Comfort",
+       price: "1999.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51DeJhaMC3L.jpg",
+       name: "What Is Islam? – The Importance of Being Islamic",
+       price: "437.0",
+   },
+   {
+       image_url:
+         "https://images-eu.ssl-images-amazon.com/images/I/518W3CnvqgL.jpg",
+       name: "Automating Inequality How High Tech Tools Profile Police and Punish the Poor",
+       price: 1130,
+       
+     },
+     {
+       image_url:
+         "https://images-eu.ssl-images-amazon.com/images/I/51WYYl38e8L.jpg",
+       name: "Heartstopper Volume Two ",
+       price: 1400,
+       
+     },
+     {
+         image_url: "https://images-eu.ssl-images-amazon.com/images/I/41vpF7COSML.jpg",
+         name: "Admiralty Law and Practice in Canada: A Treatise on the Jurisdiction Generally and in Particular Causes, and on the Practice of the Exchequer Court of ... and Rules of Practice (Classic Reprint)",
+         price: "2590.0",
+     },
+     {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51j3J3vZjpL.jpg",
+       name: "Beyond Dharma: Dissent in the Ancient Indian Sciences of Sex and Politics",
+       price: "437.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51eBiag%2BlTL.jpg",
+       name: "Essentials of Management for Healthcare Professionals",
+       price: "1999.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/31GCOow9x9L.jpg",
+       name: "Sufi World Folding strong 100% original wooden chess board with white & brown wooden coins. 8 X 8 INCH",
+       price: "348.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41NJE0FZDzL.jpg",
+       name: "History and Theory of Knowledge Production: An Introductory Outline",
+       price: "825.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41w%2BHhYmhfL.jpg",
+       name: "Holistic Spaces: 108 ways to create a mindful and peaceful home",
+       price: "1897.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/41AJopN0-rL.jpg",
+       name: "Wittgenstein: Lectures, Cambridge 1930–1933: From the Notes of G. E. Moore",
+       price: "567.0",
+   },
+   {
+       image_url: "https://images-eu.ssl-images-amazon.com/images/I/51v0At79UrL.jpg",
+       name: "Build Your Own Motorbikes Sticker Book (Build Your Own Sticker Book)",
+       price: "777.0",
+   },
+
+   ]
+   
+      var cartArr=JSON.parse(localStorage.getItem("cartItem")) || []
+
+       topReadData.map(function (data){
+       var div=document.createElement("div")
+       div.setAttribute("id","div1")
+    
+       var div2=document.createElement("div")
+       div2.setAttribute("id","insideDiv")
+       
+       var image=document.createElement("img")
+       image.setAttribute("src",data.image_url)
+       image.setAttribute("id","img")
+
+       var name=document.createElement("h3")
+       name.textContent=data.name
+       name.setAttribute("id","name")
+
+       var price=document.createElement("h5")
+       price.textContent=data.price
+       price.setAttribute("id","price")
+      
+       var div3=document.createElement("div")
+       div3.setAttribute("id","flex")
+
+       var btn=document.createElement("p")
+       btn.textContent="View Now"
+       btn.setAttribute("class","view")
+       btn.addEventListener("click",function(){
+         addToCart(data)
+       })
+      
+       var more=document.createElement("p")
+       more.textContent="More details"
+       more.setAttribute("class","more")
+       
+       
+      div2.append(image,name,price)
+      div3.append(btn,more)
+       div2.append(div3)
+
+       div.append(div2)
+
+      
+       document.querySelector("#container").append(div)
+   }) 
+   function addToCart(data){
+     cartArr.push(data)
+     localStorage.setItem("cartItem",JSON.stringify(cartArr))
+     alert("Add To Card")
+   }
+</script>

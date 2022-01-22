@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #main{
+            height: 70px;
+            width: 1340px;
+            /* border: 1px solid red; */
+            display: flex;
+             background-color: rgb(40,116,240); 
+        }
+       
+        .yellow{
+            color: yellow;
+            font-size: 30px;
+            margin-left: 30px;
+            
+        }
+        .search{
+            margin-left: 10%;
+            height: 30px;
+            width: 350px;
+            margin-top: 20px;
+
+        }
+        .searchBtn{
+            height:38px;
+            width: 80px;
+            margin-top: 20px;
+        }
+        #leftBox{
+            /* border: 1px solid blue; */
+            height: 100%;
+            width: 35%;
+            margin-left: 13%;
+            display: flex;
+        }
+        .leftFlex{
+            margin-left: 40px;
+            color: cornsilk;
+            margin-top: 30px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 15px;
+            margin-top: 2%;
+            margin-left: 10px;
+            
+        }
+        #div1{
+             /* border: 1px solid blue;  */
+            width: 300px;
+           
+            height: auto;
+            
+        }
+        #img{
+            width: 100%;
+        }
+        #name{
+            margin-left: 3%;
+            font-family: sans-serif;
+        }
+        #price{
+            margin-left: 3%;
+            font-size: 18px;
+            color: rgb(8, 151, 151);
+        }
+        #insideDiv{
+             /* border: 1px solid red;  */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding-bottom: 20px;
+        }
+        #flex{
+          display: flex;
+          justify-content: space-between;
+          /* border: 1px solid red; */
+          border-top: 1px solid grey;
+          height: 30px;
+          width: 100%;
+        }
+        .more{
+          color: rgb(9, 105, 105);
+          margin-right: 40px;
+        }
+        .view{
+          color: rgb(9, 105, 105);
+          margin-left: 30px;
+        }
+        .view:hover{
+          cursor:pointer ;
+          text-decoration: underline;
+        }
+        .more:hover{
+          cursor: pointer;
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p onclick="window.location.href='TopRead.html'" class="yellow">IdeaKart</p>
+        <input class="search" type="text">
+        <button class="searchBtn">Search</button>
+        <div id="leftBox">
+            <p class="leftFlex" onclick="window.location.href='About.html'">About</p>
+            <p class="leftFlex" onclick="window.location.href='Contact.html'">Contact</p>
+            <p class="leftFlex" onclick="window.location.href='signIn.html'">Sign In</p>
+            <p class="leftFlex" onclick="window.location.href='SignUp.html'">Sign Up</p>
+           
+        </div>
+
+    </div>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var BooksData = [
+    {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/518W3CnvqgL.jpg",
+        name: "Automating Inequality How High Tech Tools Profile Police and Punish the Poor",
+        price: 1130,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51WYYl38e8L.jpg",
+        name: "Heartstopper Volume Two ",
+        price: 1400,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/517xLUIgXUL.jpg",
+        name: "Kidz Valle Underwater 48 Pieces Tiling Puzzles (Jigsaw puzzles, Puzzles for Kids, Floor Puzzles), puzzles for kids age 4 years and above",
+        price: 299,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/41j95hEAZ9L.jpg",
+        name: 
+        " A Practical Guide to the Evaluation of Child Physical Abuse and Neglect",
+        price: 1200,
+        
+      },
+    {
+      image_url:
+        "https://images-eu.ssl-images-amazon.com/images/I/51e5BL8cleL.jpg",
+      name: "Geronimo Stilton SE: The Hunt for the Coliseum Ghost",
+      price: 3000,
+      
+    },
+    {
+      image_url:
+        "https://images-eu.ssl-images-amazon.com/images/I/51BsCE5Cr1L.jpg",
+      name: "Fancyku Magic Random Color Snake Cube 24 Parts Twist Puzzle Ruler for Kids Various Shapes Brain Teaser ",
+      price: 1567,
+      
+    },
+    {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/516BkJ7KmYL.jpg",
+        name: "Building the Perfect Beast: What Really Happens in Brand Management",
+        price: 2986,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/517o83hUEcL.jpg",
+        name: "Chapman & Nakielny's Guide to Radiological Procedures, 7e ",
+        price: 653,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51wdgHL-bqL.jpg",
+        name: "Living with Buildings: And Walking with Ghosts - On Health and Architecture (Wellcome Collection)",
+        price: 7895,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51kJ1RO3FVL.jpg",
+        name: "24PCS Throwing Gliders Educational Funny Creative Flying Glider Planes Airplane Toys for Children ",
+        price: 452,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/514fy50YPyL.jpg",
+        name: "Touch and Feel - Farm Animals",
+        price: 104,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/61BmXcKbykL.jpg",
+        name: "Match of the Day Annual 2020 ",
+        price: 319,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/41FgS%2BJKVFL.jpg",
+        name: "Magicwand® Musical Army Style Toy Machine Gun for Kids with Vibration (25 inches)",
+        price: 2178,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51sAUBjGasL.jpg",
+        name: "Papas Paranormal Tales: Ghosts, Myth, Gore and More",
+        price: 2178,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51-tZt41gTL.jpg",
+        name: "Papas Paranormal Tales: Ghosts, Myth, Gore and More",
+        price: 2985,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/41ZrCWKFIPL.jpg",
+        name: "It All Adds Up: The Story of People and Mathematics",
+        price: 658,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/515qIIMmThL.jpg",
+        name: "In the Shadow of the Devi Kumaon: Of a Land, a People, a Craft",
+        price: 943,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/4194ehA8AmL.jpg",
+        name: "Intelligence Bureau 2018: Security Assistant/Executive ",
+        price: 435,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51Fq3%2BS1uYL.jpg",
+        name: "How to Prepare for Verbal Ability and Reading Comprehension for the CAT",
+        price: 653,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51jug6mGwFL.jpg",
+        name: "Play-Doh Shape and Learn Textures and Tools ",
+        price: 299,
+        
+      },{
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51ijtH%2BM6NL.jpg",
+        name: "LIC Assistant Preliminary Examination 2019",
+        price: 135,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/416vYk13gdL.jpg",
+        name: "GST Refunds-Incorporating Notifications issued on 31-12-2018 & New GST Audit & Return Forms (4th Edition, January 2019) ",
+        price: 756,
+        
+      },{
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/615sGwroMGL.jpg",
+        name: "The Hidden Life of Trees: The Illustrated Edition",
+        price: 189,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51Xc6x3uXGL.jpg",
+        name: " The Hidden Life of Trees: The Illustrated Edition",
+        price: 795,
+        
+      },{
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/41-oZVs8w5L.jpg",
+        name: "The Begum: A Portrait of Ra’ana Liaquat Ali Khan, Pakistan’s Pioneering First Lady",
+        price: 1999,
+        
+      },
+      {
+        image_url:
+          "https://images-eu.ssl-images-amazon.com/images/I/51wUM9Hjw-L.jpg",
+        name: "Elementary Problems in Organic Chemistry for NEET/AIIMS By M S CHOUHAN",
+        price: 597,
+        
+      },
+]
+      var cartArr=JSON.parse(localStorage.getItem("cartItem")) || []
+
+       BooksData.map(function (data){
+       var div=document.createElement("div")
+       div.setAttribute("id","div1")
+    
+       var div2=document.createElement("div")
+       div2.setAttribute("id","insideDiv")
+       
+       var image=document.createElement("img")
+       image.setAttribute("src",data.image_url)
+       image.setAttribute("id","img")
+
+       var name=document.createElement("h3")
+       name.textContent=data.name
+       name.setAttribute("id","name")
+
+       var price=document.createElement("h5")
+       price.textContent=data.price
+       price.setAttribute("id","price")
+      
+       var div3=document.createElement("div")
+       div3.setAttribute("id","flex")
+
+       var btn=document.createElement("p")
+       btn.textContent="View Now"
+       btn.setAttribute("class","view")
+       btn.addEventListener("click",function(){
+         addToCart(data)
+       })
+      
+       var more=document.createElement("p")
+       more.textContent="More details"
+       more.setAttribute("class","more")
+       
+       
+      div2.append(image,name,price)
+      div3.append(btn,more)
+       div2.append(div3)
+
+       div.append(div2)
+
+      
+       document.querySelector("#container").append(div)
+   }) 
+   function addToCart(data){
+     cartArr.push(data)
+     localStorage.setItem("cartItem",JSON.stringify(cartArr))
+     alert("Add To Card")
+   }
+</script>
